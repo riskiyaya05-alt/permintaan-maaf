@@ -5,45 +5,30 @@
 
     <meta charset="UTF-8">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Maafin Aku ❤️</title>
-
+    <title>Maaf ya Michi ❤️</title>
 
     <style>
 
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
-            font-family:
-                'Segoe UI',
-                sans-serif;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-
         body {
-
             min-height: 100vh;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #ff758c,
-                    #ff7eb3
-                );
+            background: linear-gradient(
+                135deg,
+                #ff758c,
+                #ff7eb3
+            );
 
             display: flex;
-
             justify-content: center;
-
             align-items: center;
 
             padding: 20px;
@@ -51,15 +36,12 @@
             overflow: hidden;
         }
 
-
         .card {
 
             width: 100%;
-
             max-width: 500px;
 
-            background:
-                rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
 
             padding: 40px 30px;
 
@@ -68,44 +50,40 @@
             text-align: center;
 
             box-shadow:
-                0 15px 40px
-                rgba(0,0,0,0.2);
+                0 15px 40px rgba(0, 0, 0, 0.2);
 
-            animation:
-                muncul 1.5s ease;
+            animation: muncul 1.5s ease;
+
+            position: relative;
+
+            z-index: 2;
         }
-
 
         @keyframes muncul {
 
             from {
-
                 opacity: 0;
-
-                transform:
-                    translateY(50px);
+                transform: translateY(50px);
             }
 
             to {
-
                 opacity: 1;
-
-                transform:
-                    translateY(0);
+                transform: translateY(0);
             }
+
         }
 
+        .heart {
 
-        .big-heart {
-
-            font-size: 80px;
+            font-size: 75px;
 
             animation:
-                heartbeat 1.5s infinite;
+                detak 1.5s infinite;
+
+            margin-bottom: 15px;
         }
 
-
-        @keyframes heartbeat {
+        @keyframes detak {
 
             0% {
                 transform: scale(1);
@@ -126,61 +104,50 @@
             100% {
                 transform: scale(1);
             }
-        }
 
+        }
 
         h1 {
 
             color: #ff4f70;
 
-            margin:
-                20px 0;
-
             font-size: 30px;
-        }
 
+            margin-bottom: 25px;
+        }
 
         .message {
 
             color: #555;
 
-            font-size: 16px;
+            font-size: 17px;
 
             line-height: 1.8;
-
-            text-align: left;
-
-            margin-top: 20px;
         }
-
 
         .message p {
 
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
-
-        .name {
+        .love {
 
             color: #ff4f70;
 
             font-weight: bold;
         }
 
-
         button {
 
-            margin-top: 20px;
+            margin-top: 15px;
+
+            padding: 14px 30px;
 
             border: none;
 
-            padding:
-                14px 30px;
-
             border-radius: 30px;
 
-            background:
-                #ff4f70;
+            background: #ff4f70;
 
             color: white;
 
@@ -188,22 +155,19 @@
 
             cursor: pointer;
 
-            transition:
-                0.3s;
+            transition: 0.3s;
         }
-
 
         button:hover {
 
-            transform:
-                scale(1.08);
+            transform: scale(1.08);
 
-            background:
-                #ff2f58;
+            background: #ff2f58;
         }
 
-
         #response {
+
+            display: none;
 
             margin-top: 20px;
 
@@ -211,13 +175,12 @@
 
             font-weight: bold;
 
-            display: none;
+            font-size: 16px;
         }
 
+        /* HATI TERBANG */
 
-        /* HATI */
-
-        .heart {
+        .floating-heart {
 
             position: fixed;
 
@@ -231,14 +194,13 @@
             opacity: 0.7;
         }
 
-
         @keyframes naik {
 
             0% {
 
                 transform:
                     translateY(0)
-                    rotate(0);
+                    rotate(0deg);
 
                 opacity: 0;
             }
@@ -256,8 +218,8 @@
 
                 opacity: 0;
             }
-        }
 
+        }
 
         .h1 {
             left: 10%;
@@ -270,12 +232,12 @@
         }
 
         .h3 {
-            left: 50%;
+            left: 55%;
             animation-delay: 4s;
         }
 
         .h4 {
-            left: 75%;
+            left: 80%;
             animation-delay: 1s;
         }
 
@@ -289,39 +251,35 @@
 
     <!-- HATI TERBANG -->
 
-    <div class="heart h1">
+    <div class="floating-heart h1">
         ❤️
     </div>
 
-    <div class="heart h2">
+    <div class="floating-heart h2">
         💗
     </div>
 
-    <div class="heart h3">
+    <div class="floating-heart h3">
         💕
     </div>
 
-    <div class="heart h4">
+    <div class="floating-heart h4">
         💖
     </div>
 
 
-    <!-- KARTU PERMINTAAN MAAF -->
+    <!-- ISI PESAN -->
 
     <div class="card">
 
 
-        <div class="big-heart">
-
+        <div class="heart">
             ❤️
-
         </div>
 
 
         <h1>
-
-            Aku Minta Maaf
-
+            Maaf ya Michi 🥺❤️
         </h1>
 
 
@@ -329,60 +287,34 @@
 
 
             <p>
-
-                Hai kamu... ❤️
-
+                Maaf ya Michi...
             </p>
 
 
             <p>
-
-                Aku tahu mungkin aku sudah
-                membuat kamu kecewa,
-                sedih, atau bahkan marah.
-
+                Adam salah.
             </p>
 
 
             <p>
-
-                Aku benar-benar minta maaf
-                atas semua kesalahan yang
-                sudah aku lakukan.
-
+                Adam udah bobo bikin Michi bete,
+                habis tenaga Michi.
             </p>
 
 
             <p>
-
-                Aku tidak bermaksud untuk
-                menyakiti perasaan kamu.
-
-                Aku sadar bahwa kata
-                "maaf" saja mungkin
-                tidak cukup.
-
+                Kalo Michi marah,
+                Adam minta maaf nian ya Michi 🥺
             </p>
 
 
-            <p>
-
-                Tapi aku ingin kamu tahu,
-                aku benar-benar menyesal
-                dan ingin memperbaiki
-                semuanya.
-
+            <p class="love">
+                Michi, Adam sayang nian samo Michi.
             </p>
 
 
-            <p>
-
-                Maafin aku ya...
-
-                <span class="name">
-                    ❤️
-                </span>
-
+            <p class="love">
+                Sumpah ❤️
             </p>
 
 
@@ -390,16 +322,15 @@
 
 
         <button onclick="maafin()">
-
-            Aku Maafin ❤️
-
+            Maafin Adam ya Michi ❤️
         </button>
 
 
         <div id="response">
 
-            Terima kasih sudah mau
-            memaafkan aku 🥺❤️
+            Makasih ya Michi 🥺❤️
+            <br>
+            Adam sayang nian samo Michi.
 
         </div>
 
@@ -409,22 +340,18 @@
 
     <script>
 
-
         function maafin() {
 
             document
                 .getElementById("response")
                 .style.display = "block";
 
-
             document
                 .querySelector("button")
                 .innerHTML =
-                "❤️ Terima Kasih ❤️";
-
+                "Makasih ya Michi ❤️";
 
         }
-
 
     </script>
 
