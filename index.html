@@ -2,14 +2,12 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Untuk Kamu ❤️</title>
-
-    <!-- Library QR Code -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <title>Maaf ya Michi ❤️</title>
 
     <style>
 
@@ -33,41 +31,59 @@
             justify-content: center;
             align-items: center;
 
+            padding: 20px;
+
             overflow: hidden;
         }
 
-        .container {
+        .card {
 
-            width: 90%;
-            max-width: 420px;
+            width: 100%;
+            max-width: 500px;
 
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.95);
 
-            padding: 35px 25px;
+            padding: 40px 30px;
 
             border-radius: 25px;
 
             text-align: center;
 
             box-shadow:
-                0 15px 40px rgba(0,0,0,0.2);
+                0 15px 40px rgba(0, 0, 0, 0.2);
+
+            animation: muncul 1.5s ease;
 
             position: relative;
 
             z-index: 2;
         }
 
-        .heart {
+        @keyframes muncul {
 
-            font-size: 70px;
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
 
-            margin-bottom: 15px;
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
-            animation:
-                heartbeat 1.5s infinite;
         }
 
-        @keyframes heartbeat {
+        .heart {
+
+            font-size: 75px;
+
+            animation:
+                detak 1.5s infinite;
+
+            margin-bottom: 15px;
+        }
+
+        @keyframes detak {
 
             0% {
                 transform: scale(1);
@@ -88,65 +104,78 @@
             100% {
                 transform: scale(1);
             }
+
         }
 
         h1 {
 
             color: #ff4f70;
 
-            margin-bottom: 10px;
-
-            font-size: 28px;
-        }
-
-        .subtitle {
-
-            color: #777;
+            font-size: 30px;
 
             margin-bottom: 25px;
         }
 
-        #qrcode {
-
-            width: 220px;
-            height: 220px;
-
-            background: white;
-
-            padding: 10px;
-
-            margin: 20px auto;
-
-            border-radius: 15px;
-
-            display: flex;
-
-            justify-content: center;
-
-            align-items: center;
-
-            box-shadow:
-                0 5px 20px rgba(0,0,0,0.15);
-        }
-
-        .instruction {
+        .message {
 
             color: #555;
 
-            font-size: 14px;
+            font-size: 17px;
 
-            line-height: 1.6;
+            line-height: 1.8;
         }
 
-        .footer {
+        .message p {
+
+            margin-bottom: 18px;
+        }
+
+        .love {
+
+            color: #ff4f70;
+
+            font-weight: bold;
+        }
+
+        button {
+
+            margin-top: 15px;
+
+            padding: 14px 30px;
+
+            border: none;
+
+            border-radius: 30px;
+
+            background: #ff4f70;
+
+            color: white;
+
+            font-size: 16px;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+
+            transform: scale(1.08);
+
+            background: #ff2f58;
+        }
+
+        #response {
+
+            display: none;
 
             margin-top: 20px;
 
             color: #ff4f70;
 
-            font-size: 13px;
-
             font-weight: bold;
+
+            font-size: 16px;
         }
 
         /* HATI TERBANG */
@@ -155,17 +184,17 @@
 
             position: fixed;
 
-            color: rgba(255,255,255,0.5);
+            bottom: -50px;
 
             font-size: 25px;
 
             animation:
-                float 6s linear infinite;
+                naik 6s linear infinite;
 
-            bottom: -50px;
+            opacity: 0.7;
         }
 
-        @keyframes float {
+        @keyframes naik {
 
             0% {
 
@@ -189,24 +218,25 @@
 
                 opacity: 0;
             }
+
         }
 
-        .heart1 {
+        .h1 {
             left: 10%;
             animation-delay: 0s;
         }
 
-        .heart2 {
+        .h2 {
             left: 30%;
             animation-delay: 2s;
         }
 
-        .heart3 {
+        .h3 {
             left: 55%;
             animation-delay: 4s;
         }
 
-        .heart4 {
+        .h4 {
             left: 80%;
             animation-delay: 1s;
         }
@@ -219,100 +249,109 @@
 <body>
 
 
-    <!-- HATI BACKGROUND -->
+    <!-- HATI TERBANG -->
 
-    <div class="floating-heart heart1">
+    <div class="floating-heart h1">
         ❤️
     </div>
 
-    <div class="floating-heart heart2">
+    <div class="floating-heart h2">
         💗
     </div>
 
-    <div class="floating-heart heart3">
+    <div class="floating-heart h3">
         💕
     </div>
 
-    <div class="floating-heart heart4">
+    <div class="floating-heart h4">
         💖
     </div>
 
 
-    <!-- KONTEN UTAMA -->
+    <!-- ISI PESAN -->
 
-    <div class="container">
+    <div class="card">
+
 
         <div class="heart">
             ❤️
         </div>
 
+
         <h1>
-             Untuk michi ❤️
+            Maaf ya Michi 🥺❤️
         </h1>
 
-        <p class="subtitle">
-            maafin adam yo cubolah tengok ini
-            <br>
-            plisss
-        </p>
+
+        <div class="message">
 
 
-        <!-- TEMPAT QR CODE -->
-
-        <div id="qrcode"></div>
-
-
-        <p class="instruction">
-
-            📱 Scan QR Code di atas
-
-            <br>
-
-            untuk membaca pesan adamnih .
-
-        </p>
+            <p>
+                Maaf ya Michi...
+            </p>
 
 
-        <div class="footer">
+            <p>
+                Adam salah.
+            </p>
 
-            Dibuat dengan ❤️ khusus untuk michi nih
+
+            <p>
+                Adam udah bobo bikin Michi bete,
+                habis tenaga Michi.
+            </p>
+
+
+            <p>
+                Kalo Michi marah,
+                Adam minta maaf nian ya Michi 🥺
+            </p>
+
+
+            <p class="love">
+                Michi, Adam sayang nian samo Michi.
+            </p>
+
+
+            <p class="love">
+                Sumpah ❤️
+            </p>
+
 
         </div>
+
+
+        <button onclick="maafin()">
+            Maafin Adam ya Michi ❤️
+        </button>
+
+
+        <div id="response">
+
+            Makasih ya Michi 🥺❤️
+            <br>
+            Adam sayang nian samo Michi.
+
+        </div>
+
 
     </div>
 
 
     <script>
 
-        // Untuk sementara kita arahkan ke halaman maaf.html
+        function maafin() {
 
-        let linkPermintaanMaaf = "maaf.html";
+            document
+                .getElementById("response")
+                .style.display = "block";
 
+            document
+                .querySelector("button")
+                .innerHTML =
+                "Makasih ya Michi ❤️";
 
-        // Membuat QR Code
-
-        new QRCode(
-
-            document.getElementById("qrcode"),
-
-            {
-
-                text: linkPermintaanMaaf,
-
-                width: 200,
-
-                height: 200,
-
-                colorDark: "#ff4f70",
-
-                colorLight: "#ffffff",
-
-                correctLevel:
-                    QRCode.CorrectLevel.H
-
-            }
-
-        );
+        }
 
     </script>
 
