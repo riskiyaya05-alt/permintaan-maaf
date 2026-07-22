@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Untuk Kamu ❤️</title>
+
+    <!-- Library QR Code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+
+            background: linear-gradient(
+                135deg,
+                #ff758c,
+                #ff7eb3
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .container {
+
+            width: 90%;
+            max-width: 420px;
+
+            background: rgba(255,255,255,0.95);
+
+            padding: 35px 25px;
+
+            border-radius: 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.2);
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+        .heart {
+
+            font-size: 70px;
+
+            margin-bottom: 15px;
+
+            animation:
+                heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0% {
+                transform: scale(1);
+            }
+
+            25% {
+                transform: scale(1.15);
+            }
+
+            40% {
+                transform: scale(1);
+            }
+
+            60% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        h1 {
+
+            color: #ff4f70;
+
+            margin-bottom: 10px;
+
+            font-size: 28px;
+        }
+
+        .subtitle {
+
+            color: #777;
+
+            margin-bottom: 25px;
+        }
+
+        #qrcode {
+
+            width: 220px;
+            height: 220px;
+
+            background: white;
+
+            padding: 10px;
+
+            margin: 20px auto;
+
+            border-radius: 15px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            box-shadow:
+                0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .instruction {
+
+            color: #555;
+
+            font-size: 14px;
+
+            line-height: 1.6;
+        }
+
+        .footer {
+
+            margin-top: 20px;
+
+            color: #ff4f70;
+
+            font-size: 13px;
+
+            font-weight: bold;
+        }
+
+        /* HATI TERBANG */
+
+        .floating-heart {
+
+            position: fixed;
+
+            color: rgba(255,255,255,0.5);
+
+            font-size: 25px;
+
+            animation:
+                float 6s linear infinite;
+
+            bottom: -50px;
+        }
+
+        @keyframes float {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            20% {
+
+                opacity: 1;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-110vh)
+                    rotate(360deg);
+
+                opacity: 0;
+            }
+        }
+
+        .heart1 {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .heart2 {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .heart3 {
+            left: 55%;
+            animation-delay: 4s;
+        }
+
+        .heart4 {
+            left: 80%;
+            animation-delay: 1s;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HATI BACKGROUND -->
+
+    <div class="floating-heart heart1">
+        ❤️
+    </div>
+
+    <div class="floating-heart heart2">
+        💗
+    </div>
+
+    <div class="floating-heart heart3">
+        💕
+    </div>
+
+    <div class="floating-heart heart4">
+        💖
+    </div>
+
+
+    <!-- KONTEN UTAMA -->
+
+    <div class="container">
+
+        <div class="heart">
+            ❤️
+        </div>
+
+        <h1>
+             Untuk michi ❤️
+        </h1>
+
+        <p class="subtitle">
+            maafin adam yo cubolah tengok ini
+            <br>
+            plisss
+        </p>
+
+
+        <!-- TEMPAT QR CODE -->
+
+        <div id="qrcode"></div>
+
+
+        <p class="instruction">
+
+            📱 Scan QR Code di atas
+
+            <br>
+
+            untuk membaca pesan adamnih .
+
+        </p>
+
+
+        <div class="footer">
+
+            Dibuat dengan ❤️ khusus untuk michi nih
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        // Untuk sementara kita arahkan ke halaman maaf.html
+
+        let linkPermintaanMaaf = "maaf.html";
+
+
+        // Membuat QR Code
+
+        new QRCode(
+
+            document.getElementById("qrcode"),
+
+            {
+
+                text: linkPermintaanMaaf,
+
+                width: 200,
+
+                height: 200,
+
+                colorDark: "#ff4f70",
+
+                colorLight: "#ffffff",
+
+                correctLevel:
+                    QRCode.CorrectLevel.H
+
+            }
+
+        );
+
+    </script>
+
+
+</body>
+
+</html>
