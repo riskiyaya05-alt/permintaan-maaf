@@ -5,9 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Maaf ya Michi ❤️</title>
+
 
     <style>
 
@@ -15,20 +19,28 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family:
+                'Segoe UI',
+                Arial,
+                sans-serif;
         }
 
+
         body {
+
             min-height: 100vh;
 
-            background: linear-gradient(
-                135deg,
-                #ff758c,
-                #ff7eb3
-            );
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff758c,
+                    #ff7eb3
+                );
 
             display: flex;
+
             justify-content: center;
+
             align-items: center;
 
             padding: 20px;
@@ -36,163 +48,255 @@
             overflow: hidden;
         }
 
+
+        /* KARTU */
+
         .card {
 
             width: 100%;
+
             max-width: 500px;
 
-            background: rgba(255, 255, 255, 0.95);
+            background:
+                rgba(
+                    255,
+                    255,
+                    255,
+                    0.96
+                );
 
-            padding: 40px 30px;
+            padding:
+                40px 30px;
 
             border-radius: 25px;
 
             text-align: center;
 
             box-shadow:
-                0 15px 40px rgba(0, 0, 0, 0.2);
-
-            animation: muncul 1.5s ease;
+                0 15px 40px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.2
+                );
 
             position: relative;
 
-            z-index: 2;
+            z-index: 10;
+
+            animation:
+                muncul 1.2s ease;
         }
+
 
         @keyframes muncul {
 
             from {
+
                 opacity: 0;
-                transform: translateY(50px);
+
+                transform:
+                    translateY(50px);
+
             }
 
             to {
+
                 opacity: 1;
-                transform: translateY(0);
+
+                transform:
+                    translateY(0);
+
             }
 
         }
 
-        .heart {
 
-            font-size: 75px;
+        /* HATI BESAR */
+
+        .big-heart {
+
+            font-size: 80px;
 
             animation:
                 detak 1.5s infinite;
 
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
+
 
         @keyframes detak {
 
             0% {
-                transform: scale(1);
+                transform:
+                    scale(1);
             }
 
             25% {
-                transform: scale(1.15);
+                transform:
+                    scale(1.15);
             }
 
             40% {
-                transform: scale(1);
+                transform:
+                    scale(1);
             }
 
             60% {
-                transform: scale(1.15);
+                transform:
+                    scale(1.15);
             }
 
             100% {
-                transform: scale(1);
+                transform:
+                    scale(1);
             }
 
         }
 
+
+        /* JUDUL */
+
         h1 {
 
-            color: #ff4f70;
+            color:
+                #ff4f70;
 
-            font-size: 30px;
+            font-size:
+                30px;
 
-            margin-bottom: 25px;
+            margin-bottom:
+                25px;
         }
+
+
+        /* PESAN */
 
         .message {
 
-            color: #555;
+            color:
+                #555;
 
-            font-size: 17px;
+            font-size:
+                17px;
 
-            line-height: 1.8;
+            line-height:
+                1.8;
         }
+
 
         .message p {
 
-            margin-bottom: 18px;
+            margin-bottom:
+                18px;
         }
+
 
         .love {
 
-            color: #ff4f70;
+            color:
+                #ff4f70;
 
-            font-weight: bold;
+            font-weight:
+                bold;
+
+            font-size:
+                18px;
         }
+
+
+        /* TOMBOL */
 
         button {
 
-            margin-top: 15px;
+            margin-top:
+                15px;
 
-            padding: 14px 30px;
+            padding:
+                14px 30px;
 
-            border: none;
+            border:
+                none;
 
-            border-radius: 30px;
+            border-radius:
+                30px;
 
-            background: #ff4f70;
+            background:
+                #ff4f70;
 
-            color: white;
+            color:
+                white;
 
-            font-size: 16px;
+            font-size:
+                16px;
 
-            cursor: pointer;
+            cursor:
+                pointer;
 
-            transition: 0.3s;
+            transition:
+                0.3s;
         }
+
 
         button:hover {
 
-            transform: scale(1.08);
+            transform:
+                scale(1.08);
 
-            background: #ff2f58;
+            background:
+                #ff2f58;
         }
+
+
+        /* PESAN SETELAH DIKLIK */
 
         #response {
 
-            display: none;
+            display:
+                none;
 
-            margin-top: 20px;
+            margin-top:
+                20px;
 
-            color: #ff4f70;
+            color:
+                #ff4f70;
 
-            font-weight: bold;
+            font-weight:
+                bold;
 
-            font-size: 16px;
+            font-size:
+                16px;
+
+            line-height:
+                1.6;
         }
+
 
         /* HATI TERBANG */
 
         .floating-heart {
 
-            position: fixed;
+            position:
+                fixed;
 
-            bottom: -50px;
+            bottom:
+                -50px;
 
-            font-size: 25px;
+            font-size:
+                25px;
+
+            opacity:
+                0.7;
+
+            z-index:
+                1;
 
             animation:
-                naik 6s linear infinite;
-
-            opacity: 0.7;
+                naik 6s
+                linear infinite;
         }
+
 
         @keyframes naik {
 
@@ -202,12 +306,14 @@
                     translateY(0)
                     rotate(0deg);
 
-                opacity: 0;
+                opacity:
+                    0;
             }
 
             20% {
 
-                opacity: 1;
+                opacity:
+                    0.8;
             }
 
             100% {
@@ -216,29 +322,50 @@
                     translateY(-110vh)
                     rotate(360deg);
 
-                opacity: 0;
+                opacity:
+                    0;
             }
 
         }
 
-        .h1 {
-            left: 10%;
-            animation-delay: 0s;
+
+        .hati1 {
+
+            left:
+                10%;
+
+            animation-delay:
+                0s;
         }
 
-        .h2 {
-            left: 30%;
-            animation-delay: 2s;
+
+        .hati2 {
+
+            left:
+                30%;
+
+            animation-delay:
+                2s;
         }
 
-        .h3 {
-            left: 55%;
-            animation-delay: 4s;
+
+        .hati3 {
+
+            left:
+                55%;
+
+            animation-delay:
+                4s;
         }
 
-        .h4 {
-            left: 80%;
-            animation-delay: 1s;
+
+        .hati4 {
+
+            left:
+                80%;
+
+            animation-delay:
+                1s;
         }
 
     </style>
@@ -251,29 +378,29 @@
 
     <!-- HATI TERBANG -->
 
-    <div class="floating-heart h1">
+    <div class="floating-heart hati1">
         ❤️
     </div>
 
-    <div class="floating-heart h2">
+    <div class="floating-heart hati2">
         💗
     </div>
 
-    <div class="floating-heart h3">
+    <div class="floating-heart hati3">
         💕
     </div>
 
-    <div class="floating-heart h4">
+    <div class="floating-heart hati4">
         💖
     </div>
 
 
-    <!-- ISI PESAN -->
+    <!-- KARTU PERMINTAAN MAAF -->
 
     <div class="card">
 
 
-        <div class="heart">
+        <div class="big-heart">
             ❤️
         </div>
 
@@ -321,16 +448,24 @@
         </div>
 
 
-        <button onclick="maafin()">
+        <button onclick="maafinAdam()">
+
             Maafin Adam ya Michi ❤️
+
         </button>
 
 
         <div id="response">
 
             Makasih ya Michi 🥺❤️
+
             <br>
+
             Adam sayang nian samo Michi.
+
+            <br>
+
+            Sumpah ❤️
 
         </div>
 
@@ -340,16 +475,81 @@
 
     <script>
 
-        function maafin() {
+        function maafinAdam() {
 
             document
                 .getElementById("response")
                 .style.display = "block";
 
+
             document
                 .querySelector("button")
                 .innerHTML =
                 "Makasih ya Michi ❤️";
+
+
+            // Hati tambahan
+
+            for (
+                let i = 0;
+                i < 10;
+                i++
+            ) {
+
+                const heart =
+                    document.createElement(
+                        "div"
+                    );
+
+                heart.innerHTML = "❤️";
+
+                heart.style.position =
+                    "fixed";
+
+                heart.style.left =
+                    Math.random() * 100 + "%";
+
+                heart.style.bottom =
+                    "0";
+
+                heart.style.fontSize =
+                    "25px";
+
+                heart.style.zIndex =
+                    "100";
+
+                heart.style.transition =
+                    "4s";
+
+                document.body.appendChild(
+                    heart
+                );
+
+
+                setTimeout(
+                    function() {
+
+                        heart.style.transform =
+                            "translateY(-100vh)";
+
+                        heart.style.opacity =
+                            "0";
+
+                    },
+                    100
+                );
+
+
+                setTimeout(
+                    function() {
+
+                        heart.remove();
+
+                    },
+                    4000
+                );
+
+            }
 
         }
 
