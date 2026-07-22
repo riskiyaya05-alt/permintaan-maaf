@@ -6,7 +6,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Untuk Kamu ❤️</title>
+    <title>Untuk Michi ❤️</title>
 
     <!-- Library QR Code -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
@@ -17,7 +17,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
         }
 
         body {
@@ -33,15 +33,18 @@
             justify-content: center;
             align-items: center;
 
+            padding: 20px;
+
             overflow: hidden;
         }
 
-        .container {
+        /* KARTU UTAMA */
 
-            width: 90%;
+        .container {
+            width: 100%;
             max-width: 420px;
 
-            background: rgba(255,255,255,0.95);
+            background: rgba(255, 255, 255, 0.96);
 
             padding: 35px 25px;
 
@@ -50,24 +53,41 @@
             text-align: center;
 
             box-shadow:
-                0 15px 40px rgba(0,0,0,0.2);
+                0 15px 40px rgba(0, 0, 0, 0.2);
 
             position: relative;
 
-            z-index: 2;
+            z-index: 10;
+
+            animation: muncul 1s ease;
         }
+
+        @keyframes muncul {
+
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        /* HATI */
 
         .heart {
-
             font-size: 70px;
 
-            margin-bottom: 15px;
+            margin-bottom: 10px;
 
             animation:
-                heartbeat 1.5s infinite;
+                detak 1.5s infinite;
         }
 
-        @keyframes heartbeat {
+        @keyframes detak {
 
             0% {
                 transform: scale(1);
@@ -88,36 +108,45 @@
             100% {
                 transform: scale(1);
             }
+
         }
+
+        /* JUDUL */
 
         h1 {
-
             color: #ff4f70;
 
-            margin-bottom: 10px;
+            font-size: 30px;
 
-            font-size: 28px;
+            margin-bottom: 10px;
         }
+
+        /* SUBTITLE */
 
         .subtitle {
+            color: #666;
 
-            color: #777;
+            font-size: 16px;
 
-            margin-bottom: 25px;
+            line-height: 1.6;
+
+            margin-bottom: 20px;
         }
 
-        #qrcode {
+        /* QR CODE */
 
-            width: 220px;
-            height: 220px;
+        .qr-box {
+            width: 240px;
+
+            height: 240px;
 
             background: white;
 
-            padding: 10px;
+            padding: 15px;
 
             margin: 20px auto;
 
-            border-radius: 15px;
+            border-radius: 20px;
 
             display: flex;
 
@@ -126,20 +155,38 @@
             align-items: center;
 
             box-shadow:
-                0 5px 20px rgba(0,0,0,0.15);
+                0 5px 20px rgba(0, 0, 0, 0.15);
         }
 
-        .instruction {
+        #qrcode {
+            width: 200px;
+            height: 200px;
 
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        #qrcode img {
+            width: 200px;
+            height: 200px;
+        }
+
+        /* INSTRUKSI */
+
+        .instruction {
             color: #555;
 
             font-size: 14px;
 
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        .footer {
+        /* FOOTER */
 
+        .footer {
             margin-top: 20px;
 
             color: #ff4f70;
@@ -152,23 +199,23 @@
         /* HATI TERBANG */
 
         .floating-heart {
-
             position: fixed;
 
-            color: rgba(255,255,255,0.5);
+            bottom: -50px;
 
             font-size: 25px;
 
-            animation:
-                float 6s linear infinite;
+            opacity: 0.7;
 
-            bottom: -50px;
+            z-index: 1;
+
+            animation:
+                naik 6s linear infinite;
         }
 
-        @keyframes float {
+        @keyframes naik {
 
             0% {
-
                 transform:
                     translateY(0)
                     rotate(0deg);
@@ -177,36 +224,35 @@
             }
 
             20% {
-
-                opacity: 1;
+                opacity: 0.8;
             }
 
             100% {
-
                 transform:
                     translateY(-110vh)
                     rotate(360deg);
 
                 opacity: 0;
             }
+
         }
 
-        .heart1 {
+        .hati1 {
             left: 10%;
             animation-delay: 0s;
         }
 
-        .heart2 {
+        .hati2 {
             left: 30%;
             animation-delay: 2s;
         }
 
-        .heart3 {
+        .hati3 {
             left: 55%;
             animation-delay: 4s;
         }
 
-        .heart4 {
+        .hati4 {
             left: 80%;
             animation-delay: 1s;
         }
@@ -219,26 +265,26 @@
 <body>
 
 
-    <!-- HATI BACKGROUND -->
+    <!-- HATI TERBANG -->
 
-    <div class="floating-heart heart1">
+    <div class="floating-heart hati1">
         ❤️
     </div>
 
-    <div class="floating-heart heart2">
+    <div class="floating-heart hati2">
         💗
     </div>
 
-    <div class="floating-heart heart3">
+    <div class="floating-heart hati3">
         💕
     </div>
 
-    <div class="floating-heart heart4">
+    <div class="floating-heart hati4">
         💖
     </div>
 
 
-    <!-- KONTEN UTAMA -->
+    <!-- KONTEN -->
 
     <div class="container">
 
@@ -246,20 +292,34 @@
             ❤️
         </div>
 
+
         <h1>
-             Untuk michi ❤️
+            Untuk Michi ❤️
         </h1>
 
+
         <p class="subtitle">
-            maafin adam yo cubolah tengok ini
+
+            Maafin Adam yo...
+
             <br>
-            plisss
+
+            Cubolah tengok ini dulu.
+
+            <br>
+
+            Plisss 🥺❤️
+
         </p>
 
 
-        <!-- TEMPAT QR CODE -->
+        <!-- QR CODE -->
 
-        <div id="qrcode"></div>
+        <div class="qr-box">
+
+            <div id="qrcode"></div>
+
+        </div>
 
 
         <p class="instruction">
@@ -268,14 +328,14 @@
 
             <br>
 
-            untuk membaca pesan adamnih .
+            Ada pesan dari Adam khusus untuk Michi ❤️
 
         </p>
 
 
         <div class="footer">
 
-            Dibuat dengan ❤️ khusus untuk michi nih
+            Dibuat dengan ❤️ khusus untuk Michi
 
         </div>
 
@@ -284,12 +344,21 @@
 
     <script>
 
-        // Untuk sementara kita arahkan ke halaman maaf.html
+        /*
+        =========================================
+        LINK HALAMAN PERMINTAAN MAAF
+        =========================================
+        */
 
-            let linkPermintaanMaaf =
-                 "https://riskivayaa05-alt.github.io/permintaan-maaf/maaf.html";
+        const linkPermintaanMaaf =
+            "https://riskivayaa05-alt.github.io/permintaan-maaf/maaf.html";
 
-        // Membuat QR Code
+
+        /*
+        =========================================
+        MEMBUAT QR CODE
+        =========================================
+        */
 
         new QRCode(
 
